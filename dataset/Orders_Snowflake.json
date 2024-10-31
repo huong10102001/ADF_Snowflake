@@ -1,0 +1,42 @@
+{
+	"name": "Orders_Snowflake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "USER_ID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "ORDER_DATE",
+				"type": "DATE"
+			},
+			{
+				"name": "STATUS",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "_ETL_LOADED_AT",
+				"type": "TIMESTAMP_NTZ"
+			}
+		],
+		"typeProperties": {
+			"schema": "JAFFLE_SHOP",
+			"table": "ORDERS"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

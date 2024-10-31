@@ -1,0 +1,27 @@
+{
+	"name": "blob_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copydata",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"file_name": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/data/blobs/jaffle_shop/customers",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/2890f5a9-9e1e-4078-8309-b13758068f65/resourceGroups/demo-snowflake/providers/Microsoft.Storage/storageAccounts/demostoragesnowflake",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

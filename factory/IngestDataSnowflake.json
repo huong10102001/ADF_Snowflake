@@ -1,0 +1,9 @@
+{
+	"name": "IngestDataSnowflake",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9f36f10f-0f7d-47d6-a44c-b853f6e017d9",
+		"tenantId": "039815dd-00ae-48d7-adbb-090e93dcbc01"
+	}
+}
